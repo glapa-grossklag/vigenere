@@ -12,4 +12,7 @@ vigenere.h
 
 frequencies.h
 	const double frequencies[256]
+
+cryptanalysis.h
+	size_t find_key_length(Bytes ciphertext)
 ```
