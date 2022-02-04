@@ -4,6 +4,7 @@
 bytes.h
 	Bytes
 	void bytes_print(Bytes bytes)
+	Bytes slice(Bytes bytes, size_t start, size_t stop, size_t interval)
 
 vigenere.h
 	Bytes encrypt(Bytes plaintext, Bytes key)
