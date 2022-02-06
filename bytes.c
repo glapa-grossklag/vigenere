@@ -28,13 +28,9 @@ void bytes_print(Bytes bytes) {
 }
 
 Bytes bytes_slice(Bytes bytes, size_t start, size_t stop, size_t interval) {
-    size_t size = (stop - start) / interval;
-    Bytes result = {
-        .bytes = calloc(size, sizeof(uint8_t)),
-        .size = size,
-    };
+	Bytes result = bytes_new((stop - start) / interval);
 
-    for (size_t i = 0; i < size; i += 1) {
+    for (size_t i = 0; i < result.size; i += 1) {
         result.bytes[i] = bytes.bytes[(i + start) * interval];
     }
 
