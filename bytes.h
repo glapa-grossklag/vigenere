@@ -8,9 +8,19 @@
  * A struct that holds a collection of BYTES and it's SIZE.
  */
 typedef struct {
-    uint8_t *bytes;
-    size_t size;
+  uint8_t *bytes;
+  size_t size;
 } Bytes;
+
+/**
+ * Allocate memory for a Bytes object of a given SIZE.
+ */
+Bytes bytes_new(size_t size);
+
+/**
+ * Free the memory associate with BYTES.
+ */
+void bytes_delete(Bytes bytes);
 
 /**
  * Print the BYTES to stdout.
@@ -28,6 +38,6 @@ void bytes_print(Bytes bytes);
  * NOTE:
  *     The bytes that are returned are malloc'd, the caller must free.
  */
-Bytes slice(Bytes bytes, size_t start, size_t stop, size_t interval);
+Bytes bytes_slice(Bytes bytes, size_t start, size_t stop, size_t interval);
 
 #endif
