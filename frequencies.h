@@ -4,7 +4,7 @@
 /**
  * The frequency of each ASCII character in English-language text.
  */
-const double frequencies[256] = {
+static const double frequencies[256] = {
     [0] = 0,
     [1] = 0,
     [2] = 0,
