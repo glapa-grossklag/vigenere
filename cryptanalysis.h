@@ -1,9 +1,9 @@
 #ifndef CRYPTANALYSIS_H
 #define CRYPTANALYSIS_H
 
-#include <stddef.h>
-
 #include "bytes.h"
+
+#include <stddef.h>
 
 /**
  * Find the most likely key length of the CIPHERTEXT.

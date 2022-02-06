@@ -8,8 +8,8 @@
  * A struct that holds a collection of BYTES and it's SIZE.
  */
 typedef struct {
-  uint8_t *bytes;
-  size_t size;
+    uint8_t *bytes;
+    size_t size;
 } Bytes;
 
 /**

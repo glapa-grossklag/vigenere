@@ -1,4 +1,5 @@
 SRC    = $(wildcard *.c)
+HDR    = $(wildcard *.h)
 OBJ    = $(SRC:%.c=%.o)
 BIN    = vigenere
 
@@ -21,8 +22,8 @@ clean: tidy
 	rm -f $(BIN)
 
 .PHONY: format
-format:
-	find . -name "*.[ch]" | xargs clang-format -i -style=file
+format: .clang-format
+	clang-format -i -style=file $(SRC) $(HDR)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $<
